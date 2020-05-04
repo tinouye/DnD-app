@@ -1,0 +1,1 @@
+{"name": "Drew Id", "player_class": "Druid", "level": 6, "background": "hermit", "race": "firbolg", "inspiration": 0, "prof_bonus": 3, "ac": 15, "speed": 30, "hp": [45, 45], "temp_hp": 0, "hit_dice": 0, "death_saves": 0, "money": 36, "skills": ["insight", "medicine", "perception", "nature"], "saving_throws": ["int", "wis"]}
