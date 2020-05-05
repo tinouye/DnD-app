@@ -33,11 +33,10 @@ class Character:
     }
 
     skills = []
-    spells = []
-    spell_slots = [0,0,0,0,0,0,0,0,0]
 
     def __init__(self, name, player_class, level, background, race,
-    stats, inspiration, prof_bonus, saving_throws, skills, ac, speed, hp, temp_hp, hit_dice, death_saves, money
+    stats, inspiration, prof_bonus, saving_throws, skills, ac, speed, hp, temp_hp, hit_dice, death_saves, money,
+    spell_slots, spells
     ):
         self.name = name
         self.player_class = player_class
@@ -55,9 +54,11 @@ class Character:
         self.money = money
         self.skills = skills
         self.saving_throws = saving_throws
+        self.spell_slots = spell_slots
+        self.spells = spells
         
         for stat in stats:
-            self.stats[stat] = stat
+            self.stats[stat] = stats[stat]
 
 
     def save_character(self):
@@ -65,5 +66,3 @@ class Character:
         save_file = open(f"{self.name}.json", "w")
         save_file.write(char_data_json)
         save_file.close()
-
-print("done")

@@ -41,4 +41,5 @@ def backend_load_char(filename):
 
 
 def load_char(word_list):
-    return backend_load_char(word_list[0])
+    filename = " ".join(word_list)
+    return backend_load_char(filename)

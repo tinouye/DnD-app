@@ -1,5 +1,6 @@
 import functions
 import api
+from character import Character
 
 def parse_input(inputstr):
     """
@@ -14,7 +15,7 @@ def parse_input(inputstr):
         api.search(word_list[1:])
 
     elif word_list[0] == 'load':
-        functions.load_char(word_list[1:])
+        return functions.load_char(word_list[1:])
 
 
 if __name__ == "__main__":
@@ -24,4 +25,6 @@ if __name__ == "__main__":
     while inputstr != "quit":
         inputstr = input("\n\nEnter command: ")
         print("")
-        parse_input(inputstr)
+        output = parse_input(inputstr)
+        if type(output) == Character:
+            loaded_char = output
